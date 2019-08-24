@@ -1,0 +1,350 @@
+/*-- Locations --*/
+.grid{
+	padding: 4.5vw;
+	display: flex;
+	flex-flow: row wrap;
+	width: 90vw;
+	height: 680px;
+	text-align: center;
+}
+/*.lie{
+	display: flex;
+	flex-flow: column;
+	width: 32.4%;
+	height: auto;
+	margin: 5px;
+}
+*/
+.biggest {
+	padding: 0;
+}
+
+.biggest h4 {
+	font-family: '隶变-简','华文隶书','STLiTi','楷体',kai,sans-serif;
+	font-size: 3em;
+	margin-bottom: 50px;
+	color: #000;
+}
+
+.biggest .noscroll {
+	overflow: hidden;
+}
+
+.biggest .grid-wrap {
+	margin: 0 auto;
+	/*width: 100%;*/
+	width: auto;
+	height: 680px;
+	padding: 0;
+}
+
+.biggest .grid {
+	position: relative;
+	-webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.biggest .view-full .grid {
+	-webkit-transform: translateZ(-1500px);
+	transform: translateZ(-1500px);
+}
+
+.biggest .grid figure {
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.biggest .grid figure.active {
+	opacity: 0;
+}
+
+/*.biggest .grid .placeholder {
+	pointer-events: none;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.biggest .placeholder > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.biggest .placeholder .front img {
+	width: 100%;
+	height: 100%;
+}
+
+.biggest .placeholder .back {
+	background: white;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.biggest .biggest .view-full .placeholder {
+	-webkit-transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
+	transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
+}
+
+.biggest .vertical .view-full .placeholder {
+	-webkit-transform: translateZ(1500px) rotateX(-179.9deg);
+	transform: translateZ(1500px) rotateX(-179.9deg);
+}
+
+.biggest .horizontal .view-full .placeholder {
+	-webkit-transform: translateZ(1500px) rotateY(-179.9deg);
+	transform: translateZ(1500px) rotateY(-179.9deg);
+}
+*/
+.biggest .grid figure img {
+	display: block;
+	/*width: 100%;*/
+	width: auto;
+	height: 330px;
+}
+
+.biggest .content, .loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.biggest .content {
+	overflow-y: scroll;
+	height: 0;
+	background: #000;
+	visibility: hidden;
+	z-index: 400;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.biggest .content.show {
+	height: auto;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.biggest .content > div {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	/*width: auto;
+	height: 330px;*/
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	background: #000;
+}
+
+.biggest .content > div.show {
+	height: auto;
+	opacity: 1;	
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+.biggest .close-content {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 10px;
+	font-size: 1.6em;
+	color: #DDD;
+	cursor: pointer;
+	pointer-events: none;
+	padding: 1em;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.biggest .close-content:hover {
+	color: #FFF;
+}
+
+.biggest .content > div.show ~ .close-content {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.biggest .b-pic, .b-text {
+	max-width: 80%;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.biggest .vertical .b-pic, .vertical .b-text {
+	-webkit-transform: translateY(100px);
+	transform: translateY(100px);
+}
+
+/*.biggest .horizontal .b-pic, .horizontal .b-text {
+	-webkit-transform: translateX(-100px);
+	transform: translateX(-100px);
+}*/
+
+/*.biggest .content > div.show .b-pic, .content > div.show .b-text {
+	opacity: 1;
+}*/
+
+/*.biggest .vertical .content > div.show .b-pic, .vertical .content > div.show .b-text {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.biggest .horizontal .content > div.show .b-pic, .horizontal .content > div.show .b-text {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.biggest p.b-text:nth-child(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.biggest p.b-text:nth-child(3) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.biggest .b-pic {
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+}*/
+
+/*.biggest .b-text {
+	font-family: '隶变-简','华文隶书','STLiTi','楷体',kai,sans-serif;
+	text-align: left;
+	margin: 0 auto;
+	padding: 0;
+	color: #ddd;
+	font-size: 2em;
+}
+
+.biggest p.b-title {
+	font-family: '隶变-简','华文隶书','STLiTi','楷体',kai,sans-serif;
+	font-size: 2.5em;
+	color: #FFF;
+}
+
+.biggest .b-text:last-child {
+	padding-bottom: 100px;
+}
+*/
+/*.biggest .no-pointerevents .content, .biggest .no-csstransforms3d .content, .biggest .no-csstransitions .content, .biggest .no-pointerevents .content > div, .biggest .no-csstransforms3d .content > div, .biggest .no-csstransitions .content > div, .biggest .no-pointerevents .close-content, .biggest .no-csstransforms3d .close-content, .biggest .no-csstransitions .close-content {
+	opacity: 1;
+	visibility: visible;
+	display: none;
+	height: auto;
+}
+
+.biggest .no-pointerevents .show .close-content, .biggest .no-csstransforms3d .show .close-content, .biggest .no-csstransition .show .close-content, .biggest .no-pointerevents div.show, .biggest .no-csstransforms3d div.show, .biggest .no-csstransitions div.show, .biggest .no-csstransitions .b-pic, .biggest .no-csstransitions .b-text, .biggest .no-csstransforms3d .b-pic, .biggest .no-csstransforms3d .b-text, .biggest .no-pointerevents .b-pic, .biggest .no-pointerevents .b-text {
+	display: block !important;
+	opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+	.biggest .grid figure, .biggest .grid .placeholder {
+		width: 240px;
+		height: auto;
+	}
+}*/
+
+.biggest .grid figure {
+	position: relative;
+	/*float: left;*/
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+	/*width: 32.4%;*/
+	width: auto;
+	height: 330px;
+	margin: 5px;
+}
+
+.biggest .grid figure img {
+	position: relative;
+	display: block;
+}
+
+.biggest .grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.biggest .grid figure figcaption::before, .grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.biggest .grid figure figcaption, .grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.biggest figure.picture figcaption {
+	top: auto;
+	bottom: 0;
+	padding: 0;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.55);
+	color: #3c4a50;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+.biggest figure.picture h4 {
+	text-align: center;
+	font-size: 2em;
+	color: #FFF;
+	margin-top:3em;
+}
+
+.biggest figure.picture h4 {
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+
+.biggest figure.picture:hover figcaption, figure.picture:hover h4 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.biggest figure.picture:hover h4 {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.1s;
+}
+
+/*-- //Locations --*/

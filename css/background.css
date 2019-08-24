@@ -1,0 +1,95 @@
+body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: '隶变-简','华文隶书','STLiTi','楷体',kai,sans-serif;
+}
+.iframe{
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  -moz-background-size: 100% 100%;
+}
+.menu{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100vw;
+	height: 56.25vw; 
+}
+.bankuai{
+	width: 100vw;
+  height: 100vh;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.biaotikuang{
+	text-align: center;
+	width: 100%;
+  height: 20vh;
+	margin: 0;
+  padding: 0;
+}
+.yijibiaoti{
+  text-align: center;
+　display:inline-block;
+	font-size: 4em;
+	margin-top: 1.5vh;
+	margin-bottom: 0px;
+  padding: 0;
+	color: #fff;
+}
+.erjibiaoti{
+  text-align: center;
+　display:inline-block;
+	font-size: 1.5em;
+	color: #dedede;
+	margin-top: 1vh;
+  padding: 0;
+}
+.fenlan{
+  float: left;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+}
+.chatu{
+  width: 100%;
+  /*height:100vh;*/
+}
+.jianjiezhengwen{
+  display:inline-block;
+	font-size: 2.8em;
+  width: 100%;
+  text-align: left;
+  padding: 1em;
+  /*overflow:hidden;*/
+/*  white-space:nowrap;*/
+}
+.erjijianjie{
+  color: #51C4D3;
+  text-align: center;
+  width: 100%;
+	 font-size: 2em;
+	 line-height: 1.9em;
+   margin: 1 0 1 0em;
+   padding: 0;
+}
+.list{
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.top{
+  position: fixed;z-index: 9999;width: 30px ;height: 30px;right: 50px; bottom: 50px;
+}
+.top a {
+  color: #fff;
+  text-decoration: none;
+  font-family: kai;
+}
+.top a:hover {color: #51C4D3;}

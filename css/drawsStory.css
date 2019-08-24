@@ -1,0 +1,57 @@
+*{
+	font-family: '隶变-简','华文隶书','STLiTi','楷体',kai,sans-serif;
+}
+#toLeft{
+	position: fixed;
+	z-index: 9999;
+	height: 10vw;
+	left: 5vw; 
+	bottom: 50vh;
+	font-size: 3vw;
+	color: #fff;
+	background: transparent;
+	border: 0px;
+}
+#toLeft:hover {
+    color: #51C4D3;
+}
+#toRight{
+	position: fixed;
+	z-index: 9999;
+	height: 10vw;
+	right: 5vw; 
+	bottom: 50vh;
+	font-size: 3vw;
+	color: #fff;
+	background: transparent;
+	border: 0px;
+}
+#toRight:hover {
+    color: #51C4D3;
+}
+#big{
+	display: block;
+	text-align: center;
+	padding:1vw 10vw;
+}
+
+#bPic{
+	display: inline-block;
+	text-align: center;
+}
+#bPic img{
+	text-align: center;	
+}
+.b-pic{
+	width: 80vw;
+}
+.b-text{
+	color: #fff;
+	font-size: 2.5vw;
+	text-align: left;
+}
+.b-title{
+	color: #fff;
+	font-size: 5vw;
+	text-align: left;
+}

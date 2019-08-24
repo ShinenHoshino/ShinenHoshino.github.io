@@ -1,0 +1,111 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-image: url(../img/bg.jpg);
+	font-family: '隶变-简','华文隶书','STLiTi','楷体',kai,sans-serif;
+}
+.big{
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.left{
+	margin: 0;
+	padding: 0;
+}
+.right{
+	padding: 0;
+	height: 100vh;
+	border-left: 2px dashed #51C4D3;
+}
+.Line{
+	text-align: center;
+	padding: 3vh 0 2vh 0;
+}
+.Line img{
+	width: 75%;
+	text-align: center;
+}
+.touxiang{
+	margin: 0;
+	text-align: center;
+	border-radius:50%;
+	background: url(../img/erweima.png) no-repeat center ;
+	background-size:contain;
+}
+.touxiang img{
+	width: 50%;
+	height: width;
+	border-radius:50%;
+	text-align: center;
+	opacity: 1;
+}
+.touxiang :hover{
+	opacity: 0;
+}
+.name{
+	color: #fff;
+	font-size: 2em;
+	text-align: center;
+}
+iframe{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	border: 0;
+}
+.btn{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	width:100%;
+}
+.btn button{
+	width: 85%;
+	background: none;
+	color: #fff;
+	font-size: 1.5em;
+	border: none;
+	border-top:2px dotted grey;
+	border-bottom: 2px dotted grey;
+}
+#leftI{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+#leftI button{
+	padding: 0;
+	margin-top: 4vh;
+	background: none;
+	color: #fff;
+	font-size: 1.5em;
+	border-radius:50%;
+	border:2px dotted grey;
+}
+#leftO{
+	position: fixed;
+	z-index: 9999;
+	left: 5px;
+	top: 5px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+}
+#leftO button{
+	padding: 0;
+	background: none;
+	color: #fff;
+	font-size: 1.5em;
+	border-radius:50%;
+	border:2px dotted grey;
+}
+#times{
+	color: grey;
+	font-size: 1em;
+	text-align: center;
+}
+
+

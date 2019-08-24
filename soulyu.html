@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>守幽秘境</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link href="css/background.css" rel="stylesheet">
+	<link href="css/circle.css" rel="stylesheet">
+ </head>
+ <body background="images/background.png">
+
+ 	<div class="iframe" style="background-image:url(images/s-title.png)">
+  		<iframe class="menu" src="indexMenu.html"></iframe>
+ 	</div>
+
+ 	<div class="row" name="s_jianjie" id="s_jianjie">
+ 		<div class="biaotikuang">
+ 			<p class="yijibiaoti">守幽秘境</p>
+ 			<p class="erjibiaoti">--- Soulyu ---</p>
+ 		</div>
+ 		<div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+ 			<img class="chatu" src="images/s-logo.png">
+ 		</div>
+ 		<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+ 			<p class="jianjiezhengwen" style="color: #51C4D3">
+ 				守幽，一个与世隔绝的心灵世界。<br><br><br>
+ 				守幽是沈渊的精神世界，<br>
+ 				是沈渊进行一切精神活动的场所。<br>
+ 				守幽没有固定交替的昼夜与四季，<br>
+ 				一切随沈渊心境而变。<br>
+ 				守幽之名来自灵魂(Soul)与梦(Yume)。<br><br>
+ 				欢迎来到守幽。
+			</p> 			
+ 		</div>
+ 	</div>
+
+ 	<div class="row" name="s_renwu" id="s_renwu">
+ 		<div class="biaotikuang">
+ 			<p class="yijibiaoti">常驻人物</p>
+ 			<p class="erjibiaoti">--- Who ---</p>
+ 		</div>
+ 		<div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+ 			<p id="renwujianjie" class="jianjiezhengwen" style="color: #51C4D3" align="right"></p> 
+ 		</div>
+ 		<div class="col-lg-6 col-md-7 col-sm-6 col-xs-6" id="circle">
+ 			<div style="text-align:center;clear:both;"></div>
+			<div class="main">
+			  <div class="navigation-circle" id="main-circle">
+				<div class="navigation-circle__inner">
+				  <svg class="navigation-circle-svg navigation-circle-svg--opaque" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 320 320" style="enable-background:new 0 0 320 320;">
+					<circle cx="160" cy="160" r="158" fill="none" stroke-width="3" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" style="stroke-dashoffset:0;stroke-dasharray:none;"></circle>
+				  </svg>
+				  <svg class="navigation-circle-svg navigation-circle-svg--mask" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 320 320" style="enable-background:new 0 0 320 320;">
+					<circle id="mask-circle" cx="160" cy="160" r="158" fill="none" stroke-width="3" stroke="#0EB0C9" stroke-linecap="round" stroke-miterlimit="10" style="stroke-dasharray:1005.3088px;"></circle>
+				  </svg>
+				  <ul class="navigation-circle__list">
+				  	<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(1)" onmouseenter="calculateOffset(1)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">沈渊
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Shinen Hoshino</h4>
+						</div></a></li>
+					<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(2)" onmouseenter="calculateOffset(2)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">霜月圣冰
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Seikoori Shimotsuki</h4>
+						</div></a></li>
+					<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(3)" onmouseenter="calculateOffset(3)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">沈夜
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Seiya Shimotsuki</h4>
+						</div></a></li>
+					<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(4)" onmouseenter="calculateOffset(4)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">沈珂
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Sekai Hoshino</h4>
+						</div></a></li>
+					<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(5)" onmouseenter="calculateOffset(5)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">沈琪
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Siky Hoshino</h4>
+						</div></a></li>
+					<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(6)" onmouseenter="calculateOffset(6)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">沈卓
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Seidraw Hoshino</h4>
+						</div></a></li>
+					<li class="navigation-circle-list-item"><a class="navigation-circle-list-item__point" onClick="onClick(7)" onmouseenter="calculateOffset(7)" onMouseLeave="onMouseLeave()">
+						<div class="navigation-circle-list-item__meta">
+						  <h3 class="navigation-circle-list-item__title">沈睿
+						  </h3>
+						  <h4 class="navigation-circle-list-item__subtitle">Seiri Hoshino</h4>
+						</div></a></li>					
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			<script src="js/circle.js"></script>
+		</div> 		
+ 	</div>
+
+ 	<div class="row" name="s_quyu" id="s_quyu">
+ 		<div class="biaotikuang">
+ 			<p class="yijibiaoti">管辖区域</p>
+ 			<p class="erjibiaoti">--- Where ---</p>
+ 		</div>
+ 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+ 	 		<!-- <a href="#" target="_blank"><img src="images/sp-zmh.png"></a> -->
+ 	 		<img class="chatu" src="images/sp-zmh.png">
+ 	 		<p class="erjijianjie">
+ 	 			织梦海<br>一片由梦而生的浩瀚海洋<br>——<br>
+				织梦海宛若天空之境，<br>将一切的倒影完美呈现。<br>
+				每逢沈渊踏足其上，<br>织梦海都会泛出微小的涟漪，<br>
+				织梦丝悄悄向沈渊汇聚而去。<br>
+				海上清风徐徐，<br>不时有帆船驶过、海鸥翱翔。
+			</p>
+ 		</div>
+ 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+ 			<!-- <a href="#" target="_blank"><img src="images/sp-wll.png"></a> -->
+			<img class="chatu" src="images/sp-wll.png">
+ 	 		<p class="erjijianjie">
+ 	 			万灵廊<br>一条无限延伸的海上长廊<br>——<br>
+				万灵廊垂满堇色紫藤。<br>
+				每逢海风吹过，<br>紫藤花总会发出清脆的铃声。<br>
+				沈渊常坐于万灵廊上眺望织梦海，<br>灵感便不断浮现。<br>
+				万灵廊不仅是灵感的诞生地，<br>亦是众多灵魂来到守幽的必经之路。
+			</p>			
+ 		</div>
+ 		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+ 			<!-- <a href="#" target="_blank"><img src="images/sp-nxd.png"></a> -->
+ 			<img class="chatu" src="images/sp-nxd.png">
+ 	 		<p class="erjijianjie">
+				凝心岛<br>一座神秘独特的圆形孤岛<br>——<br>
+				凝心岛是沈渊的居住地，<br>主要建筑为7座高塔。<br>
+				高塔盘旋上升，<br>至中央星渊塔为最高点。<br>
+				岛上道路规律排布，<br>高空俯瞰宛如魔法纹章。<br>
+				岛植银杏、红枫、无尽夏等植株。
+			</p>
+ 		</div>
+ 	</div>
+
+ 	<div class="row" name="s_richang" id="s_richang">
+ 		<div class="biaotikuang">
+ 			<p class="yijibiaoti">日常故事</p>
+ 			<p class="erjibiaoti">--- What ---</p>
+ 		</div>
+ 		<div class="iframe">
+  			<iframe class="list" src="richanglist.html"></iframe>
+ 		</div>
+ 	</div>
+	<div class="top"><a href="#">TOP</a></div>
+ 	<div><iframe style="width: 100%;border: 0" src="foot.html"></iframe></div>
+ </body>
+ </html>
