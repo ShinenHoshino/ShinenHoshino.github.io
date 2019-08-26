@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>技能树</title>
+    <style type="text/css">
+        body, div, img, ul, li
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            font-size: 12px;
+            /*background-color: #DDD;*/
+            padding-left: 9vw;
+            background-image: url(img/bg.jpg);
+        }
+        ul, ul li
+        {
+            list-style: none;
+        }
+        .clear
+        {
+            clear: both;
+        }       
+        .box
+        {
+            /*padding-left:9vw;*/
+            position: relative;
+            /*width: 630px;*/
+            /*margin: 0 auto;*/
+        }
+        .line1, .line2, .line3, .line4, .line5, .line6
+        {
+            position: absolute;
+            visibility: hidden;
+        }
+        .line2
+        {
+            top: 7.8vw;
+            left: 4.5vw;
+        }
+        .line3
+        {
+            top: 15.6vw;
+        }
+        .line4
+        {
+            top: 23.4vw;
+            left: 4.5vw;
+        }
+        .line5
+        {
+            top: 31.2vw;
+        }
+        .line6
+        {
+            top: 39vw;
+            left: 4.5vw;
+        }
+        .boxF, .boxS, .boxT, .overlay
+        {
+            width: 8vw;
+            height: 10vw;
+            overflow: hidden;
+        }
+        .boxF, .boxS
+        {
+            visibility: hidden;
+        }
+        .boxF
+        {
+            transform: rotate(120deg);
+            float: left;
+            margin-left: 1vw;
+            -ms-transform: rotate(120deg);
+            -moz-transform: rotate(120deg);
+            -webkit-transform: rotate(120deg);
+        }
+        .boxS
+        {
+            transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -webkit-transform: rotate(-60deg);
+        }
+        .boxT
+        {
+            transform: rotate(-60deg);
+            background: no-repeat 50% center;
+            background-size: 125% auto;
+            -ms-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -webkit-transform: rotate(-60deg);
+            visibility: visible;
+            /*background-color: grey;*/
+        }
+        .noGet{
+            background-image: url(img/powerTree/noGet.png);
+        }
+        .overlay
+        {
+            transition: all 250ms ease-in-out 0s;
+            display: none;
+            position: relative;
+            text-align: center;
+        }
+        .overlay:hover
+        {
+            background-color: rgba(0,0,0,0.6);
+        }
+        .boxT:hover .overlay
+        {
+            display: block;
+        }
+        .overlay span
+        {
+            display: inline-block;
+            position: absolute;
+            left: 0.25vw;
+            top:4vw;
+            border-radius: 3px;
+            /*background-color: #d3b850;*/
+            text-align: center;
+            line-height: 2vw;
+            width: 7.5vw;
+            height: 2vw;
+            text-decoration: none;
+            color: White;
+            font-size: 1vw;
+            font-weight: bolder;
+        }
+        .red span
+        {
+            background-color: #ce5777;
+        }
+        .yellow span
+        {
+            background-color: #d3b850;
+        }
+        .blue span
+        {
+            background-color: #51C4D3;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!--第1行(line1)-->
+        <div class="line1">
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/xmind.jpg);">
+                        <div class="overlay blue">
+                            <span>XMind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/office.jpg);">
+                        <div class="overlay blue">
+                            <span>Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/metasequoia.jpg);">
+                        <div class="overlay yellow">
+                            <span>Metasequoia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/mmd.jpg);">
+                        <div class="overlay yellow">
+                            <span>MikuMikuDance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                           <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--第2行(line2)-->
+        <div class="line2">
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/story.jpg);">
+                        <div class="overlay blue">
+                            <span>故事剧情</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/live2D.jpg);">
+                        <div class="overlay yellow">
+                            <span>Live 2D</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!--第3行(lineThird)-->
+        <div class="line3">
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/html.jpg);">
+                        <div class="overlay red">
+                            <span>HTML + CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/forSoulyu.png);">
+                        <div class="overlay">
+                            <span>Start in Soulyu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/draw.jpg);">
+                        <div class="overlay yellow">
+                            <span>图绘设定</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <!-- 第4行Line4 -->        
+        <div class="line4">
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/android.jpg);">
+                        <div class="overlay red">
+                            <span>Android开发</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/java.jpg);">
+                        <div class="overlay red">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/c.jpg);">
+                        <div class="overlay red">
+                            <span>C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/game.jpg);">
+                        <div class="overlay red">
+                            <span>游戏实现</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/sai.jpg);">
+                        <div class="overlay yellow">
+                            <span>SAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/clip.jpg);">
+                        <div class="overlay yellow">
+                            <span>Clip Studio Paint</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第5行Line5 -->
+        <div class="line5">
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/swift.jpg);">
+                        <div class="overlay red">
+                            <span>Swift</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/rpgmaker.jpg);">
+                        <div class="overlay red">
+                            <span>RPG Maker VX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/ps.jpg);">
+                        <div class="overlay yellow">
+                            <span>Photoshop CC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                           <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/ae.jpg);">
+                        <div class="overlay yellow">
+                            <span>After Effects CC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第6行Line6 -->
+        <div class="line6">
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                           <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/unity.jpg);">
+                        <div class="overlay red">
+                            <span>Unity 3D</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT noGet">
+                        <!-- <div class="overlay">
+                            <span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/ai.jpg);">
+                        <div class="overlay yellow">
+                            <span>Illustrator CC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxF">
+                <div class="boxS">
+                    <div class="boxT" style="background-image: url(img/powerTree/ad.jpg);">
+                        <div class="overlay yellow">
+                            <span>Affinity Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

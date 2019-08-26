@@ -6,8 +6,10 @@ body{
 }
 .big{
 	margin: 0;
+	padding: 0;
 	width: 100vw;
 	height: 100vh;
+	background-color: #CE5777;
 }
 .left{
 	margin: 0;
@@ -70,6 +72,9 @@ iframe{
 	border-top:2px dotted grey;
 	border-bottom: 2px dotted grey;
 }
+.btn :hover{
+	color: #51C4D3;
+}
 #leftI{
 	text-align: center;
 	padding: 0;
@@ -83,6 +88,9 @@ iframe{
 	font-size: 1.5em;
 	border-radius:50%;
 	border:2px dotted grey;
+}
+#leftI :hover{
+	border-color:#51C4D3;
 }
 #leftO{
 	position: fixed;
@@ -102,10 +110,14 @@ iframe{
 	border-radius:50%;
 	border:2px dotted grey;
 }
+#leftO :hover{
+	border-color:#51C4D3;
+}
 #times{
 	color: grey;
 	font-size: 1em;
 	text-align: center;
 }
+
 
 
